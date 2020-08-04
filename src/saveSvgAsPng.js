@@ -174,7 +174,6 @@
 
   let cachedRules = null;
   const styleSheetRules = () => {
-    if (cachedRules) return cachedRules;
     return cachedRules = Array.from(document.styleSheets).map(sheet => {
       try {
         return {rules: sheet.cssRules, href: sheet.href};
